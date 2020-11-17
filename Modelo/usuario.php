@@ -19,7 +19,7 @@ class Usuario{
     }
     
     public function GetIdRol(){
-        return $this->$id_rol;
+        return $this->id_rol;
     }
 
     public function GetNombre(){
@@ -72,11 +72,11 @@ class Usuario{
     private function BuscarUsuario($correo, $clave){
       $respuesta=[];
       $BD= Db::Conectar();
-      $sql=$DB->prepare('SELECT nombre,id_rol,id_usuario FROM usuarios WHERE correo=? and clave=?');
+      $sql=$BD->prepare('SELECT nombre,id_rol,id_usuario FROM usuarios WHERE correo=? and clave=?');
       $sql->bindvalue(1, $correo);
       $sql->bindvalue(2,$clave);
       $sql->execute();
-      $respuesta=$sql->fecthAll();
+      $respuesta=$sql->fetchAll();
       return $respuesta;
     }
 
