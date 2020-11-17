@@ -77,7 +77,11 @@ class Usuario{
       $sql->bindvalue(1, $correo);
       $sql->bindvalue(2,$clave);
       $sql->execute();
+<<<<<<< HEAD
       $respuesta=$sql->fetch();
+=======
+      $respuesta=$sql->fetchAll();
+>>>>>>> f4b6e9f1c5c4ce9e16f176645ecf67d2972a76e8
       return $respuesta;
     }
 
