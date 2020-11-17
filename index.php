@@ -33,32 +33,31 @@
   </div>
   <div class="card alt">
     <div class="toggle"></div>
-    <h1 class="title">Register
+    <h1 class="title">Registro
       <div class="close"></div>
     </h1>
     <form>
       <div class="input-container">
         <input type="text" id="Username" required="required"/>
-        <label for="Username">Username</label>
+        <label for="Username">Nombre</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
         <input type="password" id="Password" required="required"/>
-        <label for="Password">Password</label>
+        <label for="Password">Contraseña</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
         <input type="password" id="Repeat Password" required="required"/>
-        <label for="Repeat Password">Repeat Password</label>
+        <label for="Repeat Password">Confirmar Contraseña</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button><span>Next</span></button>
+        <button><span>Registrar</span></button>
       </div>
     </form>
   </div>
 </div>
-<!-- Portfolio-->
 	</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

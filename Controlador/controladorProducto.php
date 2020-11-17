@@ -10,9 +10,9 @@ class ControladorProducto
 
     public function ListarProducto()
     {
-        $producto  =  new Productos();
+       
         $crudProducto = new CrudProducto();
-        return json_encode($crudProducto->ListarProducto($producto));
+        return json_encode($crudProducto->ListarProducto());
     }
 
     public function RegistrarProducto($producto)
