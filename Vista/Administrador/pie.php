@@ -14,6 +14,10 @@
   <script src="../Vista/Administrador/assets1/js/core/popper.min.js"></script>
   <script src="../Vista/Administrador/assets1/js/core/bootstrap-material-design.min.js"></script>
   <script src="../Vista/Administrador/assets1/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="sweetalert2.all.min.js"></script>
+<script src="../js/estilos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
   <!-- Plugin for the momentJs  -->
   <script src="../Vista/Administrador/assets1/js/plugins/moment.min.js"></script>
   <!--  Plugin for Sweet Alert -->
