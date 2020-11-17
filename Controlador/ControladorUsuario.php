@@ -1,9 +1,9 @@
 <?php
 require '../Modelo/usuario.php';
 $persona= new usuario();
-$login= $_POST["enviar"];
+$accion= $_POST["accion"];
 $respuesta=[];
-if($login=1){
+if($accion=1){
  $correo=$_POST["correo"];
  $clave = $_POST["clave"];
  $persona->SetCorreo($correo);

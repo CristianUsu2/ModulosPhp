@@ -18,7 +18,7 @@ if(!$pos){
 if(empty($clave)){
  $respuesta2['vacion']="el campo no debe ser vacio";
 }else if(strlen($clave)<=3){
- $respuesta2['minimo']="la contraseña no debe tener mas de 4 caracteres";
+ $respuesta2['minimo']="la contraseña  debe tener mas de 4 caracteres";
 }
 echo json_encode([
 'respuesta'=>count($respuesta1) == 0 && count($respuesta2)==0,

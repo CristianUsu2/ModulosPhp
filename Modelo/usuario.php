@@ -1,4 +1,5 @@
 <?php 
+require 'conexion.php';
 
 class Usuario{
     private $id_usuario;
@@ -19,7 +20,7 @@ class Usuario{
     }
     
     public function GetIdRol(){
-        return $this->$id_rol;
+        return $this->id_rol;
     }
 
     public function GetNombre(){
@@ -72,27 +73,31 @@ class Usuario{
     private function BuscarUsuario($correo, $clave){
       $respuesta=[];
       $BD= Db::Conectar();
-      $sql=$DB->prepare('SELECT nombre,id_rol,id_usuario FROM usuarios WHERE correo=? and clave=?');
+      $sql=$BD->prepare('SELECT nombre,id_rol,id_usuario FROM usuarios WHERE correo=? and clave=?');
       $sql->bindvalue(1, $correo);
       $sql->bindvalue(2,$clave);
       $sql->execute();
-      $respuesta=$sql->fecthAll();
+      $respuesta=$sql->fetch();
       return $respuesta;
     }
 
     public function IniciarSesion($correo, $clave){
       $validacion[]=$this->BuscarUsuario($correo, $clave);
-      $respuesta=0;
+      $respuesta=[];
+      
       if(!empty($validacion)){
-         if($validacion[1]== 1){
-            $_SESSION["nombre"]=$validacion[0];
-            $_SESSION["idUsuario"]=$validacion[2];
-            $respuesta=1;   
+          foreach($validacion as $a){
+         if($a[1] == 7){
+            $_SESSION["nombre"]=$a[0];
+            $_SESSION["idUsuario"]=$a[2];
+            $respuesta['rol']='administrador';   
          }else{
-            $_SESSION["nombre"]=$validacion[0];
-            $_SESSION["idUsuario"]=$validacion[2];
-            $respuesta=2; 
+            $_SESSION["nombre"]=$a[0];
+            $_SESSION["idUsuario"]=$a[2];
+            $respuesta['rol']='usuario';
          }
+         }
+         
       } 
      return $respuesta;
     }
@@ -102,8 +107,14 @@ class Usuario{
         $busqueda[]=$this->BuscarUsuario($correo,$clave);
         if(empty($busqueda)){
          $db= Db::Conectar();
-         $sql=$db->prepare('INSERT INTO usuarios VALUES(null,2,?,?,?,?,?,?,1)');
+         $sql=$db->prepare('INSERT INTO usuarios VALUES(null,8,?,?,?,?,?,?,1)');
          try{
+         $sql->bindvalue(1, $nombre);
+         $sql->bindvalue(2, $apellido);
+         $sql->bindvalue(3, $telefono);
+         $sql->bindvalue(4, $direccion);  
+         $sql->bindvalue(5, $clave);
+         $sql->bindvalue(6, $correo);  
          $sql->execute();
          $respuesta=1;
          }catch(Exception $e){
