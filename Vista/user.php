@@ -1,3 +1,6 @@
+<?php 
+require '../Validaciones/seguridad.php';
+?>
 <?php
 require 'Usuario/cabeza.php';
 ?>
@@ -30,11 +33,11 @@ require 'Usuario/menu.php';
                             </div>
                             <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
                                 <div class="hero__caption">
-                                    <span data-animation="fadeInRight" data-delay=".4s">60% Discount</span>
-                                    <h1 data-animation="fadeInRight" data-delay=".6s">Winter <br> Collection</h1>
-                                    <p data-animation="fadeInRight" data-delay=".8s">Best Cloth Collection By 2020!</p>
+                                    <span data-animation="fadeInRight" data-delay=".4s">60% descuentos</span>
+                                    <h1 data-animation="fadeInRight" data-delay=".6s">Ropa<br>Mujer</h1>
+                                    <p data-animation="fadeInRight" data-delay=".8s">Nueva coleccion 2020!</p>
                                     <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                        <a href="industries.html" class="btn hero-btn">Shop Now</a>
+                                        <a href="industries.html" class="btn hero-btn">Compra ahora</a>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +72,7 @@ require 'Usuario/menu.php';
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle text-center mb-85">
-                            <h2>Shop by Category</h2>
+                            <h2>Nuestras Categorias</h2>
                         </div>
                     </div>
                 </div>
@@ -79,9 +82,9 @@ require 'Usuario/menu.php';
                             <div class="category-img">
                                 <img src="../Vista/Usuario/assets/img/categori/cat1.jpg" alt="">
                                 <div class="category-caption">
-                                    <h2>Owmen`s</h2>
-                                    <span class="best"><a href="#">Best New Deals</a></span>
-                                    <span class="collection">New Collection</span>
+                                    <h2>Mujer</h2>
+                                    <span class="best"><a href="#">Ropa mujer</a></span>
+                                    <span class="collection">Nuevos productos</span>
                                 </div>
                             </div>
                         </div>
@@ -91,9 +94,9 @@ require 'Usuario/menu.php';
                             <div class="category-img text-center">
                                 <img src="../Vista/Usuario/assets/img/categori/cat2.jpg" alt="">
                                 <div class="category-caption">
-                                    <span class="collection">Discount!</span>
-                                    <h2>Winter Cloth</h2>
-                                   <p>New Collection</p>
+                                    <span class="collection">Descuentos!</span>
+                                    <h2>Rebajas</h2>
+                                   <p>Nuevos productos</p>
                                 </div>
                             </div>
                         </div>
@@ -103,9 +106,9 @@ require 'Usuario/menu.php';
                             <div class="category-img">
                                 <img src="../Vista/Usuario/assets/img/categori/cat3.jpg" alt="">
                                 <div class="category-caption">
-                                    <h2>Man`s Cloth</h2>
-                                    <span class="best"><a href="#">Best New Deals</a></span>
-                                    <span class="collection">New Collection</span>
+                                    <h2>Hombre</h2>
+                                    <span class="best"><a href="#">Ropa masculina</a></span>
+                                    <span class="collection">Nueva coleccion</span>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +118,13 @@ require 'Usuario/menu.php';
         </section>
         <section class="latest-product-area padding-bottom">
             <div class="container">
-                
+            <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle text-center mb-85">
+                            <h2>Nuevos productos</h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div class="row">
@@ -139,7 +148,7 @@ require 'Usuario/menu.php';
                                         <div class="price">
                                             <ul>
                                                 <li>$40.00</li>
-                                                <li class="discount">$60.00</li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
@@ -148,7 +157,10 @@ require 'Usuario/menu.php';
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="single-product mb-60">
                                     <div class="product-img">
-                                        <img src="../Vista/Usuario/assets/img/categori/product2.png" alt="">
+                                        <img src="../Vista/Usuario/assets/img/categori/product6.png" alt="">
+                                        <div class="new-product">
+                                            <span>New</span>
+                                        </div>
                                     </div>
                                     <div class="product-caption">
                                         <div class="product-ratting">
@@ -162,12 +174,12 @@ require 'Usuario/menu.php';
                                         <div class="price">
                                             <ul>
                                                 <li>$40.00</li>
-                                                <li class="discount">$60.00</li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="single-product mb-60">
                                     <div class="product-img">
@@ -188,12 +200,17 @@ require 'Usuario/menu.php';
                                         <div class="price">
                                             <ul>
                                                 <li>$40.00</li>
-                                                <li class="discount">$60.00</li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-12">
+                        <div class="section-tittle text-center mb-85">
+                            <h2>Productos de rebaja</h2>
+                        </div>
+                        </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="single-product mb-60">
                                     <div class="product-img">
@@ -240,13 +257,10 @@ require 'Usuario/menu.php';
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6">
+                              <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="single-product mb-60">
                                     <div class="product-img">
-                                        <img src="../Vista/Usuario/assets/img/categori/product6.png" alt="">
-                                        <div class="new-product">
-                                            <span>New</span>
-                                        </div>
+                                        <img src="../Vista/Usuario/assets/img/categori/product5.png" alt="">
                                     </div>
                                     <div class="product-caption">
                                         <div class="product-ratting">

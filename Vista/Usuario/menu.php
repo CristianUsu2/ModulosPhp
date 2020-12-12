@@ -1,4 +1,4 @@
- 
+
  <header>
        <div class="header-area">
             <div class="main-header ">
@@ -22,14 +22,12 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <ul class="contact-now">     
-                                        <li>+57 3003542074</li>
-                                    </ul>
+                                   
                                 </div>
                                 <div class="header-info-right">
                                    <ul>                                          
-                                       <li><a href="login.html">Mi Cuenta </a></li>
-                                       <li><a href="carrito.php">Carrito</a></li>
+                                       <li><a href="#"><?php echo $_SESSION["nombre"]?></a></li>
+                                       <li><a href="../Validaciones/cerrar.php?s=1">Cerrar Sesion</a></li>
                                    </ul>
                                 </div>
                             </div>
@@ -41,7 +39,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                 <div class="logo">
-                                  <a href="index.html"><img src="../Vista/Usuario/assets/img/logo/logo.png" alt=""></a>
+                                  <a href="#"><img src="../Vista/Usuario/assets/img/logo/" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
@@ -49,7 +47,7 @@
                                     <nav>                                                
                                         <ul id="navigation">                                                                                                                                     
                                             <li><a href="user.php">Inicio</a></li>
-                                            <li><a href="Catagori.html">Catagorias</a></li>
+                                            <li><a href="categorias.php">Catagorias</a></li>
                                             <li><a href="contacto.php">Contacto</a></li>
                                         </ul>
                                     </nav>
@@ -71,11 +69,11 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="shopping-card">
+                                        <div id="iconC" class="shopping-card">
                                             <a href="carrito.php"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
                                     </li>
-                                   <li class="d-none d-lg-block"> <a href="../index.php" class="btn header-btn">Iniciar Sesión</a></li>
+                                
                                 </ul>
                             </div>
                             <div class="col-12">

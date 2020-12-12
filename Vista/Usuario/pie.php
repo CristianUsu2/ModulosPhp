@@ -79,6 +79,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </div>
 
 </footer>
+<script src="../Vista/Usuario/assets/js/CompraU.js"></script>
  <script src="../Vista/Usuario/assets/js/vendor/modernizr-3.5.0.min.js"></script>
  <script src="../Vista/Usuario/assets/js/vendor/jquery-1.12.4.min.js"></script>
  <script src="../Vista/Usuario/assets/js/popper.min.js"></script>
